@@ -1,0 +1,120 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+#bg-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.bg {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#bg-left {
+    background-image: url(img/kanye-stage.jpg);
+}
+
+#bg-right {
+    background-image: url(img/maga-hat.jpg);
+}
+
+#quote {
+    background-color: #f7f7f7;
+    border: 1px solid darkgrey;
+    border-radius: 16px;
+    width: 500px;
+    padding: 16px 32px;
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#quote-text p {
+    font-size: 20px;
+    line-height: 32px;
+    font-style: italic;
+    padding: 0 16px;
+}
+
+#buttons {
+    margin: 32px 0 16px;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    border-radius: 16px;
+    font-size: 32px;
+    padding: 8px;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+    opacity: 70%;
+    cursor: pointer;
+}
+
+#kanye {
+    background-color: hsl(209, 97%, 60%);
+}
+
+#trump {
+    background-color: hsl(0, 68%, 45%);
+}
+
+#streaks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.streak {
+    margin: 24px auto 0;
+    text-align: center;
+}
+
+/*+1 Animation*/
+
+@keyframes moneyAnimation {
+    0% {
+        opacity: 1;
+        top: -50px;
+        visibility: visible;
+    }
+    90% {
+        opacity: 0;
+        top: -100px;
+        visibility: hidden;
+    }
+    100% {
+        top: -50px;
+    }
+}
+
+.guess-animation {
+    animation: moneyAnimation 1s forwards;
+}
+
+#animation {
+    visibility: hidden;
+    position: relative;
+    top: -50px;
+    left: 32px;
+    height: 0;
+}
+
+.success {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
